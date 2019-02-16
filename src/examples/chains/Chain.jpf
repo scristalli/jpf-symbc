@@ -1,0 +1,21 @@
+target=chains.Chain
+classpath=${jpf-symbc}/build/examples
+type_classpath=${jpf-symbc}/build/examples/chains
+sourcepath=${jpf-symbc}/src/examples
+
+symbolic.strings=true
+symbolic.dp=no_solver
+symbolic.debug=true
+
+#symbolic.arrays = true
+
+symbolic.lazy = true
+symbolic.lazy.subtypes = true
+
+search.multiple_errors=true
+
+vm.insn_factory.class=gov.nasa.jpf.symbc.SymbolicInstructionFactory
+
+symbolic.method=chains.Chain.driver(sym#sym#sym#sym#sym)
+#symbolic.method=chains.Chain.driver(sym#sym#sym#sym),java.util.PriorityQueue.heapify()
+listener = gov.nasa.jpf.symbc.SymbolicListener,gov.nasa.jpf.symbc.CustomListener

@@ -8,5 +8,5 @@ symbolic.lazy = true
 
 symbolic.method=lazyinit.paramAndPoly.AbsTest.test(sym)
 symbolic.lazy=true
-//listener = gov.nasa.jpf.symbc.heap.HeapSymbolicListener
+listener = gov.nasa.jpf.symbc.heap.HeapSymbolicListener
 search.multiple_errors=true
